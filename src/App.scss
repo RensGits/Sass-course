@@ -17,11 +17,52 @@ $weight-bold: 600;
 
 // mixins
 
+@mixin flexRow{
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexRowCenter(){
+  @include flexRow;
+  justify-content: center;
+}
+
+@mixin flexRowSpread(){
+  @include flexRow;
+  justify-content: space-between;
+}
+
+@mixin flexRowEnd(){
+  @include flexRow;
+  justify-content: flex-end
+}
+
+@mixin flexColumnCenter(){
+  @include flexRowCenter;
+  flex-direction: column;
+}
+
+@mixin flexColumnSpread(){
+  @include flexColumnSpread;
+  flex-direction: column;
+}
+
+@mixin flexColumnEnd(){
+  @include flexRowEnd();
+  flex-direction: column;
+}
+
 @mixin fontStyles($fontSize, $fontWeight){
   color: $color-quaternary;
   font-family: 'Open Sans', sans-serif;
   font-size: $fontSize;
   font-weight: $fontWeight;
+  margin-bottom: 0.7em;
+
+}
+
+@mixin hoverAnimation($param...){
+  transition: $param;
 }
   
 h1{
@@ -48,21 +89,36 @@ a, li{
 
 .App{
   background-color: $color-primary;
+  padding: 2em;
+}
+
+footer{
+  background-color: $color-tertiary;
 }
 
 // nesting
 
 .nav{
+  width: 50%;
+  ul{
+    @include flexRowSpread()
+  }
 
   ul li {
     list-style: none;
   }
 
   a {
+      @include hoverAnimation(color 0.3s);
       text-decoration: none;
 
       &:hover {
         color: $color-primary
       }
+
   }
+}
+
+.navigation-container{
+  @include flexRowEnd()
 }
