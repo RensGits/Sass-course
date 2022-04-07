@@ -1,0 +1,42 @@
+$color-primary: #2F2FA2;
+$color-secondary: #F64C72;
+$color-tertiary: #99738E;
+$color-quaternary: white;
+
+$font-small: 0.85rem;
+$font-medium: 1rem;
+$font-large: 1.2rem;
+$font-xlarge: 1.6rem;
+$font-xxlarge: 2rem;
+
+h1,h2,h3,p,a{
+  color: $color-quaternary
+}
+
+h1{
+  font-size: $font-xxlarge;
+}
+
+h2{
+  font-size: $font-xlarge;
+}
+
+h3{
+  font-size: $font-large;
+}
+
+p{
+  font-size: $font-medium;
+}
+
+li{
+  background-color: $color-secondary;
+  color: $color-quaternary;
+}
+
+.App{
+  background-color: $color-primary;
+}
+
+
+
