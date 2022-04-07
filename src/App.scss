@@ -38,5 +38,19 @@ li{
   background-color: $color-primary;
 }
 
+.nav{
+
+  ul li {
+    list-style: none;
+  }
+
+  a {
+      text-decoration: none;
+
+      &:hover {
+        color: $color-primary
+      }
+  }
+}
 
 

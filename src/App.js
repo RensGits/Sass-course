@@ -5,10 +5,10 @@ function App() {
     <div className="App">
       <nav className="nav">
         <ul>
-          <li><a href=""></a>Home</li>
-          <li><a href=""></a>About us</li>
-          <li><a href=""></a>Services</li>
-          <li><a href=""></a>Contact</li>
+          <li><a href="">Home</a></li>
+          <li><a href="">About us</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Contact</a></li>
         </ul>
       </nav>
       <section>
