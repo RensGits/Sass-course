@@ -9,34 +9,48 @@ $font-large: 1.2rem;
 $font-xlarge: 1.6rem;
 $font-xxlarge: 2rem;
 
-h1,h2,h3,p,a{
-  color: $color-quaternary
-}
+$weight-light: 300;
+$weight-medium: 400;
+$weight-bold: 600;
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+
+// mixins
+
+@mixin fontStyles($fontSize, $fontWeight){
+  color: $color-quaternary;
+  font-family: 'Open Sans', sans-serif;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+}
+  
 h1{
-  font-size: $font-xxlarge;
+  @include fontStyles($font-xxlarge, $weight-bold);
+
 }
 
 h2{
-  font-size: $font-xlarge;
+  @include fontStyles($font-xlarge,$weight-medium);
 }
 
 h3{
-  font-size: $font-large;
+  @include fontStyles($font-large,$weight-medium);
 }
 
 p{
-  font-size: $font-medium;
+  @include fontStyles($font-medium, $weight-light);
 }
 
-li{
-  background-color: $color-secondary;
-  color: $color-quaternary;
+a, li{
+  @include fontStyles($font-small, $weight-light);
 }
+
 
 .App{
   background-color: $color-primary;
 }
+
+// nesting
 
 .nav{
 
@@ -52,5 +66,3 @@ li{
       }
   }
 }
-
-
