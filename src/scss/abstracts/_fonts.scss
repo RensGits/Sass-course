@@ -1,0 +1,42 @@
+@use './colors' as *;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+
+$font-small: 0.85rem;
+$font-medium: 1rem;
+$font-large: 1.2rem;
+$font-xlarge: 1.6rem;
+$font-xxlarge: 2rem;
+
+$weight-light: 300;
+$weight-medium: 400;
+$weight-bold: 600;
+
+@mixin fontStyles($fontSize, $fontWeight){  
+  color: $color-quaternary;
+  font-family: 'Open Sans', sans-serif;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  margin-bottom: 0.7em;
+}
+
+h1{
+    @include fontStyles($font-xxlarge, $weight-bold);
+  }
+  
+  h2{
+    @include fontStyles($font-xlarge,$weight-medium);
+  }
+  
+  h3{
+    @include fontStyles($font-large,$weight-medium);
+  }
+  
+  p{
+    @include fontStyles($font-medium, $weight-light);
+  }
+  
+  a, li{
+    @include fontStyles($font-small, $weight-light);
+  }
