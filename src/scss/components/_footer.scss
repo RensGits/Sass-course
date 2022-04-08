@@ -1,0 +1,7 @@
+@use '../abstracts' as *;
+
+.footer-container{
+    @include flexRowSpread;
+    padding: 2em 40em;
+    min-height: 8em;
+}
