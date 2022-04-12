@@ -3,7 +3,7 @@
 .App{
   position: relative;
   background-color: a.$color-primary;
-  padding: 4em;
+  padding-top: 3em;
 }
 
 footer{
@@ -13,8 +13,6 @@ footer{
 .homepage-padding{
   padding: 0 15em;
 }
-
-// nesting
 
 .nav{
   width: 100%;
@@ -42,19 +40,50 @@ footer{
 
 .landingpage-image-container{
   position: relative;
-  padding: 8em 5em;
-  margin-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-top: 7em;
   width: 100%;
+  text-align: justify;
+
+  
+  p,h2{
+    padding: 0 45vw 0 25vw;
+    @include a.desktop1350{
+      padding: 0 35vw 0 25vw
+    }
+    @include a.desktop-tablet1100{
+      padding: 0 25vw 0 25vw
+    }
+  }
+
+  h2{
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.landingpage-image{
+  width: 60vw;
+  margin-bottom: 10vw;
 }
 
 .landingpage-image-container-overlay{
   position: absolute;
-  padding: 6em 3em 3em 3.3em;
-  bottom: -4em;
-  right: -7em;
-  height: 25em;
-  width: 30em;
+  padding: 4vw 4vw 2vw 4vw;
+  top: 30vw;
+  left: 70%;
+  transform: translateX(-25%);
+  width: 20vw;
+  height: 25vw;
   background-color: a.$color-secondary;
+
+  h2{
+    font-size: 1.4vw;
+    padding: unset
+  }
 }
 
 .logo-container{

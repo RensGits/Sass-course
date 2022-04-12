@@ -40,3 +40,27 @@ h1{
   a, li{
     @include fontStyles($font-small, $weight-light);
   }
+
+.font-primairy{
+    h1,h2,h3,p{
+        color: $color-primary
+    }
+}
+
+.font-secondary{
+    h1,h2,h3,p{
+        color: $color-secondary
+    }
+}
+
+.font-tertiary{
+    h1,h2,h3,p{
+        color: $color-tertiary
+    }
+}
+
+.font-tertiary{
+    h1,h2,h3,p{
+        color: $color-quaternary
+    }
+}

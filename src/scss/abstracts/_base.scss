@@ -1,12 +1,16 @@
+@use './colors' as *;
+
 img{
     width: 100%;
   }
 
 section{
-    margin: 12em 8em;
+    padding: 6em 14vw;
     text-align: justify;
+    background-color: $color-quaternary;
 
     img{
         margin-top: 3em;
     }
 }
+
